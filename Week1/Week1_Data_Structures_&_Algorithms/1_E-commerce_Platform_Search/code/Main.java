@@ -189,26 +189,26 @@ class Main{
             String category = sc.nextLine();
             p[i] = new Product(x,name,category);
         }
-
+        //Assumin product id is unique(Primary key attribute)
         System.out.println("\n--- Linear Search by productId: 102 ---");
         int idx1 = linearSearchBypID(p, 102);
-        System.out.println(idx1 != -1 ? "Found at index " + idx1 : "Not found");
+        System.out.println(idx1 != -1 ? "result: " + p[idx1].getproductId() +"||" + p[idx1].getproductName()+"||"+ p[idx1].getCategory(): "Not found");
 
         System.out.println("\n--- Linear Search by productName: 'Mouse' ---");
         int[] idx3 = linearSearchBypName(p, "Mouse");
         if (idx3.length == 0) System.out.println("Not found");
-        for (int i : idx3) System.out.println("Found at index " + i);
+        for (int i : idx3) System.out.println( "result: " + p[i].getproductId() +"||" + p[i].getproductName()+"||"+ p[i].getCategory());
 
         System.out.println("\n--- Linear Search by Category: 'A' ---");
         int[] idx5 = linearSearchBypCategory(p, "A");
         if (idx5.length == 0) System.out.println("Not found");
-        for (int i : idx5) System.out.println("Found at index " + i);
+        for (int i : idx5) System.out.println("result: " + p[i].getproductId() +"||" + p[i].getproductName()+"||"+ p[i].getCategory());
 
 
         sortBypId(p);
         System.out.println("\n--- Binary Search by productId: 102 ---");
         int idx2 = binarySearchBypID(p, 102);
-        System.out.println(idx2 != -1 ? "Found at index " + idx2 : "Not found");
+        System.out.println(idx2 != -1 ? "result: " + p[idx2].getproductId() +"||" + p[idx2].getproductName()+"||"+ p[idx2].getCategory(): "Not found");
 
 
         
@@ -216,23 +216,24 @@ class Main{
         sortBypName(p);
         System.out.println("\n--- Binary Search by productName: 'Mouse' ---");
         int idx4 = binarySearchBypName(p, "Mouse");
-        System.out.println(idx4 != -1 ? "Found at index " + idx4 : "Not found");
+        System.out.println(idx4 != -1 ?"result: " + p[idx4].getproductId() +"||" + p[idx4].getproductName()+"||"+ p[idx4].getCategory(): "Not found");
         
         System.out.println("\n--- Binary Search O(k + log(n)) by productName:       'Mouse' ---");
         int[] idx9 = rangebinarySearchBypName(p, "Mouse");
         if (idx9.length == 0) System.out.println("Not found");
-        for (int i : idx9) System.out.println("Found at index " + i);
+        for (int i : idx9) System.out.println( "result: " + p[i].getproductId() +"||" + p[i].getproductName()+"||"+ p[i].getCategory());
+
         
 
         sortByCategory(p);
         System.out.println("\n--- Binary Search by Category: 'A' ---");
         int idx6 = binarySearchByCategory(p, "A");
-        System.out.println(idx6 != -1 ? "Found at index " + idx6 : "Not found");
+        System.out.println(idx6 != -1 ?"result: " + p[idx6].getproductId() +"||" + p[idx6].getproductName()+"||"+ p[idx6].getCategory() : "Not found");
         
         System.out.println("\n--- Binary Search O(k + log(n)) by productCategory     : 'A' ---");
         int[] idx10 = rangebinarySearchBypCat(p, "A");
         if (idx10.length == 0) System.out.println("Not found");
-        for (int i : idx10) System.out.println("Found at index " + i);
+        for (int i : idx10) System.out.println( "result: " + p[i].getproductId() +"||" + p[i].getproductName()+"||"+ p[i].getCategory());
 
 
         sc.close();
