@@ -1,5 +1,5 @@
 -- for tables view D:\Digital-Nurture-4.0-JAVA-FSE\WEEK2\week2_plSQL\Table creation\output
-
+select * from customers;
 select * from accounts;
 select * from transactions;
 select * from Employees;
