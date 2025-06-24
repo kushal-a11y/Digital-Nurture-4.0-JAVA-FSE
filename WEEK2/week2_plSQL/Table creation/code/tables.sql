@@ -16,6 +16,15 @@ create table accounts(
   lastmodified date,
   Foreign key(customerid) references customers(customer_id)
 );
+CREATE TABLE loans (
+    loan_id         INT PRIMARY KEY,
+    customer_id     INT,
+    loan_amount     DECIMAL(12,2),
+    interest_rate   DECIMAL(5,2),
+    start_date      DATE,
+    end_date        DATE,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
 CREATE TABLE Transactions (
     TransactionID int PRIMARY KEY,
     AccountID int,
@@ -40,6 +49,14 @@ INSERT INTO customers VALUES
 (3, 'Diya', '1985-11-02', 7.8, 15000.00, 'FALSE'),
 (4, 'Rohit', '1960-06-20', 8.2, 5000.00, 'FALSE'),
 (5, 'Meera', '1990-12-10', 9.5, 11000.00, 'FALSE');
+
+
+INSERT INTO loans VALUES 
+(101, 1, 50000.00, 7.5, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 15 DAY)),
+(102, 2, 30000.00, 8.0, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 5 DAY)),
+(103, 3, 70000.00, 6.9, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 45 DAY)),
+(104, 4, 20000.00, 8.5, CURDATE(), DATE_ADD(CURDATE(), INTERVAL 25 DAY)),
+(105, 5, 45000.00, 7.9, CURDATE(), DATE_SUB(CURDATE(), INTERVAL 10 DAY));
 
 INSERT INTO accounts (accountid, customerid, accounttype, balance, lastmodified) VALUES
 (1, 1, 'Savings', 9500, CURDATE()),
