@@ -1,3 +1,4 @@
+-- view the table creation == D:\Digital-Nurture-4.0-JAVA-FSE\WEEK2\week2_plSQL\Table creation
 CREATE OR REPLACE PROCEDURE update_interestrate IS
   CURSOR c IS
     SELECT customer_id, FLOOR(MONTHS_BETWEEN(SYSDATE, dob) / 12) AS age, interest_rate

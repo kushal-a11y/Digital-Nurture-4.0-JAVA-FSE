@@ -1,3 +1,5 @@
+-- view the table creation == D:\Digital-Nurture-4.0-JAVA-FSE\WEEK2\week2_plSQL\Table creation
+
 CREATE OR REPLACE PROCEDURE SafeTransferFunds (
   FROM_ACC         IN NUMBER,
   TO_ACC           IN NUMBER,
