@@ -1,5 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.updateBuildConfiguration": "automatic",
     "java.project.sourcePaths": [
         "WEEK2/week2_plSQL/3_Stored_Procedures/code",
         "WEEK2/week2_TDD_using_JUnit5_And_Mockito/Exercise1(SetUpMaven)",
