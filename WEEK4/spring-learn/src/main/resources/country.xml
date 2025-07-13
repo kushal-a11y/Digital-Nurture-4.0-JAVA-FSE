@@ -4,6 +4,11 @@
        xsi:schemaLocation="
          http://www.springframework.org/schema/beans 
          http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="country" class="com.cognizant.spring_learn.Country">
+        <property name="code" value="IN" />
+        <property name="name" value="India" />
+    </bean>
 
     <!-- List of countries -->
     <bean id="countryList" class="java.util.ArrayList">
