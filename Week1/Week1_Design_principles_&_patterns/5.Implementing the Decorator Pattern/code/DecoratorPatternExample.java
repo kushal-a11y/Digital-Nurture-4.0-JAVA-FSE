@@ -1,4 +1,4 @@
-package code;
+import java.util.*;
 
 interface Notifier{
   void send(String message);
