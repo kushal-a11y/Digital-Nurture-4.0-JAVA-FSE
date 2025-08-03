@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-
+import CurrencyConverter from "./CurrencyConverter";
 function App() {
   const [counter, setCounter] = useState(0);
   const [message, setMessage] = useState("");
@@ -9,6 +9,7 @@ function App() {
     setMessage("Hello from Increment");
   };
   const sayWelcome = (welcomeMessage) => {
+    alert("Welcome");
     console.log(welcomeMessage);
     setMessage(welcomeMessage);
   };
@@ -45,6 +46,7 @@ function App() {
         Say Welcome
       </button>
       {message && <p>{message}</p>}
+      <CurrencyConverter />
     </div>
   );
 }
