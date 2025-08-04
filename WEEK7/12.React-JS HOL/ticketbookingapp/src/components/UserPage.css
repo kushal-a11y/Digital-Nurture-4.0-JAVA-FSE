@@ -1,16 +1,12 @@
-.App {
+div {
   text-align: center;
 }
-/* App.css or a global stylesheet */
-
-/* Global styles or App.css */
-
 button {
-  padding: 1px 28px;
-  background-color: #2563eb; /* Tailwind blue-600 */
+  padding: 8px 28px;
+  background-color: rgba(36, 235, 112, 0.842); /* Tailwind blue-600 */
   color: #ffffff;
   border: none;
-  margin-top: 280px;
+  margin-top: 150px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 500;
@@ -21,16 +17,16 @@ button {
 }
 
 button:hover {
-  background-color: #1e40af; /* darker blue */
+  background-color: hsla(143, 71%, 40%, 0.959); /* darker blue */
   transform: translateY(-1px);
 }
 
 button:active {
-  background-color: #1d4ed8;
+  background-color: hsla(120, 76%, 48%, 0.993);
   transform: translateY(1px);
 }
 
 button:focus {
-  outline: 2px solid #93c5fd; /* light blue focus ring */
+  outline: 2px solid hsla(93, 99%, 48%, 0.774); /* light blue focus ring */
   outline-offset: 2px;
 }

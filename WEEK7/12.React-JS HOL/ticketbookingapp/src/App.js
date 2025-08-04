@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React, { useState } from "react";
+import GuestPage from "./components/GuestPage";
+import UserPage from "./components/UserPage";
 function App() {
+  let content;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  content = isLoggedIn ? <UserPage /> : <GuestPage />;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button
+        onClick={() => {
+          setIsLoggedIn(!isLoggedIn);
+        }}
+      >
+        {isLoggedIn ? (
+          <p style={{ color: "red", fontWeight: "bold" }}>Logout</p>
+        ) : (
+          <p style={{ color: "white", fontWeight: "bold" }}>Login</p>
+        )}
+      </button>
+      <>{content}</>
     </div>
   );
 }
