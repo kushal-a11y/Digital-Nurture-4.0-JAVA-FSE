@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+/* Container that holds all detail sections */
+.section-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Common styles for all three sections */
+.section-box {
+  flex: 1;
+  padding: 16px;
+  border-radius: 8px;
+  min-width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific section colors */
+.books-section {
+  background-color: #fef3c7; /* soft yellow */
+  border-left: 4px solid #f59e0b;
+}
+
+.blogs-section {
+  background-color: #e0f2fe; /* soft blue */
+  border-left: 4px solid #0284c7;
+}
+
+.courses-section {
+  background-color: #dcfce7; /* soft green */
+  border-left: 4px solid #22c55e;
+}
